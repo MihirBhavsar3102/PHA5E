@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #1a1a1a;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Increased z-index */
+}
+
+.loading-logo {
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  opacity: 0;
+}
+
+.loading-text {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 3px;
+  opacity: 0;
+}
+
+.initial-hide {
+  opacity: 1;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 100px 0;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 100px 0;
+}
+
+.outline-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.outline-text h1 {
+  font-size: clamp(6rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: white;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin: -5px 0;
+}
+
+.outline-mode h1 {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+
+.project-card {
+  position: absolute;
+  width: 300px;
+  opacity: 1;
+  z-index: 2;
+  transition: transform 0.1s ease-out;
+  transform-origin: center center;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card h2 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.project-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+#project1 {
+  top: 15%;
+  left: 5%;
+}
+#project2 {
+  top: 15%;
+  right: 5%;
+}
+#project3 {
+  bottom: 15%;
+  left: 5%;
+}
+#project4 {
+  bottom: 15%;
+  right: 5%;
+}
+
+.lang-toggle {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+}
